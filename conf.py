@@ -38,8 +38,6 @@ extensions = [
     'sphinx_rtd_theme',
 ]
 
-exclude_patterns = ["_templates", "_static", "_build", "**.ipynb_checkpoints",
-                    "colab", ".*"]
 #
 # nbsphinx ---------------------------------------------------------------------
 
@@ -65,16 +63,16 @@ nbsphinx_prolog = """
 {% set docname = env.doc2path(env.docname, base=None) %}
 
 You can run this notebook in a `live session
-<https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/master?labpath=source%2Ftutorials%2F{{
+<https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/main?labpath=tutorials%2F{{
 docname }}>`_ |Binder| or view it on `Github
-<https://github.com/spectrochempy/spectrochempy_tutorials/blob/master/source
+<https://github.com/spectrochempy/spectrochempy_tutorials/blob/main/source
 /tutorials/{{ docname }}>`_ |GitHub|.
 
 .. |Binder| image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/master?labpath=source%2Ftutorials%2F{{ docname }}
+   :target: https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/main?labpath=tutorials%2F{{ docname }}
 
 .. |GitHub| image:: https://badgen.net/badge/icon/github?icon=github&label
-   :target: https://github.com/spectrochempy/spectrochempy_tutorials/tree/master/source/tutorials/{{ docname }}
+   :target: https://github.com/spectrochempy/spectrochempy_tutorials/tree/main/tutorials/{{ docname }}
 
 """
 
@@ -88,7 +86,8 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ["_templates", "_static", "build", "**.ipynb_checkpoints",
+                    "colab", ".*"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -147,6 +146,8 @@ html_show_sphinx = False
 #
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
+
+highlight_language = 'none'
 
 
 def setup(app):

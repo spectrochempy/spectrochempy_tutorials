@@ -5,7 +5,7 @@ You can run this tutorial in a live session here: |Binder|
 
 ..
 .. |Binder| image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/master?labpath=source%2F00_introduction_to_spectrochempy.ipynb
+   :target: https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/main?labpath=00_introduction_to_spectrochempy.ipynb
 
 .. toctree::
    :maxdepth: 1
