@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to SpectroChemPy &mdash; SpectroChemPy Tutorials  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/scpy.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to SpectroChemPy Tutorials!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SpectroChemPy Tutorials
+              <img src="../_static/scpy.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to SpectroChemPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#SpectroChemPy-installation">SpectroChemPy installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Loading-the-SpectroChemPy-API">Loading the SpectroChemPy API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Importing-experimental-data">Importing experimental data</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SpectroChemPy Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction to SpectroChemPy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/00_introduction_to_spectrochempy.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>You can run this notebook in a <a class="reference external" href="https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/main?labpath=tutorials%2Ftutorials/00_introduction_to_spectrochempy.ipynb">live session</a> <a class="reference external" href="https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/main?labpath=tutorials%2Ftutorials/00_introduction_to_spectrochempy.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a> or view it on <a class="reference external" href="https://github.com/spectrochempy/spectrochempy_tutorials/blob/main/source/tutorials/tutorials/00_introduction_to_spectrochempy.ipynb">Github</a> <a class="reference external" href="https://github.com/spectrochempy/spectrochempy_tutorials/tree/main/tutorials/tutorials/00_introduction_to_spectrochempy.ipynb"><img alt="GitHub" src="https://badgen.net/badge/icon/github?icon=github&amp;label" /></a>.</p>
+<section id="Introduction-to-SpectroChemPy">
+<h1>Introduction to SpectroChemPy<a class="headerlink" href="#Introduction-to-SpectroChemPy" title="Permalink to this heading"></a></h1>
+<p>The <strong>SpectroChemPy</strong> project was developed to provide advanced tools for processing and analyzing spectroscopic data, initially for internal purposes in the <a class="reference external" href="https://www.lcs.ensicaen.fr">LCS (https://www.lcs.ensicaen.fr)</a>.</p>
+<p><strong>SpectroChemPy</strong> is essentially a library written in python language and which proposes objects (<code class="docutils literal notranslate"><span class="pre">NDDataset</span></code>, and <code class="docutils literal notranslate"><span class="pre">Project</span></code>) to contain data, equipped with methods to analyze, transform or display this data in a simple way by the user.</p>
+<p>The processed data are mainly spectroscopic data from techniques such as IR, Raman or NMR, but they are not limited to this type of application, as any type of numerical data arranged in tabular form can generally serve as the main input.</p>
+<p>To follow actively this tutorial, there are several possibilities.</p>
+<ul class="simple">
+<li><p>If you have a python distribution installed on your computer, you can download the notebooks <a class="reference external" href="link">archives</a> or you can clone the Github repository <a class="reference external" href="https://github.com/spectrochempy/spectrochempy_tutorials/tree/main/tutorials/00_introduction_to_spectrochempy.ipynb"><img alt="Github repository" src="https://badgen.net/badge/icon/github?icon=github&amp;label" /></a>.</p></li>
+<li><p>You can use the pages associated with this tutorial on Bnder <a class="reference external" href="https://mybinder.org/v2/gh/spectrochempy/spectrochempy_tutorials/main?labpath=tutorials%2F00_introduction_to_spectrochempy.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a>.</p></li>
+<li><p>Or you can also use Google Colaboratory.</p></li>
+</ul>
+<section id="SpectroChemPy-installation">
+<h2>SpectroChemPy installation<a class="headerlink" href="#SpectroChemPy-installation" title="Permalink to this heading"></a></h2>
+<p>In principle when running in a classic jupyter notebook or in jupyter lab, SpectroChemPy is already installed. If it is not the case, you must install it and its package dependencies using in the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>spectrochempy
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>spectrocat<span class="w"> </span>spectrochempy
+</pre></div>
+</div>
+<p>More detail on the installation for different OS can be found in the <a class="reference external" href="https://www.https://www.spectrochempy.fr/latest/gettingstarted/install/index.html">documentation</a></p>
+</section>
+<section id="Loading-the-SpectroChemPy-API">
+<h2>Loading the SpectroChemPy API<a class="headerlink" href="#Loading-the-SpectroChemPy-API" title="Permalink to this heading"></a></h2>
+<p>The recommended way of loading SpectroChemPy in the notebook namespace is as follow:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spectrochempy</span> <span class="k">as</span> <span class="nn">scp</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<table>
+<tr>
+<td>
+
+<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAlw
+SFlzAAAJOgAACToB8GSSSgAAAetpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6
+bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8x
+OTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAg
+eG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMu
+YWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+bWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
+dHRwOi8vbWF0cGxvdGxpYi5vcmcvPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6
+T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgqNQaNYAAAGiUlE
+QVRIDY1We4xU1Rn/3XPuYx47u8w+hnU38hTcuoUEt/6D2y4RB0ME1BoEd9taJaKh9CFiN7YGp7appUAMNmktMZFoJTYVLVQ0smsy
+26CN0SU1QgsuFAaW3WVmx33N677O6XfuyoIxTXqSO/fec+75fd93vt/3/UbDV0aKSZmCpkFMLz3T9utuu2N+o98aDSMBKVAo89z5
+y+zEz3ZafcCOfvWdlGCalqKn1Bf71CygTd+mf1esSOnpdMpTb+vWpTZuWVfe3jLPa5tzHYNm0T5N0gpdkkHaDBeGBU6d1/t/fyS8
++/CbqdfUvmsx1PuMgc2bNxv79u1zgd31r+7JH1jbIZKxWRXAcYUQ8IWvBfBXNjEuJWPgMA02NR7C3/pYT9fjdZ3A9tGrWF8YSJHn
+qcDz3y7q2T967PZv+gnYJdd1mEZ+62zGDQV/dQgKhmLzDNOXCEWM3j6eTT5Y3w78dOBKJLR1PQf+4ivPj76UPZnssBN+wbM9Aet/
+AV81Mf1EEULXYfOobvX2WWQk0aoioXwwSmirOlioY0mu8BIouzYl7P8GV3vpqCCEZvlFz769w08oLDWvyKIyL1asSm28d6WfzA97
+ztvvV1kexUMsmhlkULEkuGYmFYC6AvfUrITnwUKl5K79lkjeSSRRTCTbQPd95e1WzMbZSya74XoXAxctCllCnbECMOjZNGRwvzIX
+nD85wbkMmKK+U045Dtdi8Qp+SAxU2GTg2bYlC9224pgvmSb54vkVTBQYyhUt2KjAMyMmPjwRQW5Mh2WKwJhlBh6jVGagFM84wZnQ
+4bpC0Rt4pk1PbSt0NDcxDA5xryosDHWgtbM0DGZDWLSoiDMDYeQnGVrmOThxLozB0RAaahzkJzjKNqcIQBymJFMkOlN8Dqjpg0XY
+Tx5xO/QbmmUrqIjGJznq47TqTaClKYfjp+PInLMwnOdYvtQBZ2XcunQY+VwIo4U4muoFEjVEFE6lQyEUKzHYfgQG9ylCyngU+Cxj
+tOqxCDGHcCsOMCs6iQul5ZiStdATYxjMZXDLTUVwLY8Jey4uOh2IxjwsrP8UXJYxUrkZrghBahzV5iXU6gNkq0Z1EzIsUBUSCV2n
+EOHo0LVxHCpuxabJJdhi5PFnvw5vLXwXIfNZvD/+JNo/X40NegE54sUaazl+UL8XD1x+FB9Ijjt4EQfdGN6J/x131LwIV9ap/AYs
+0x1fz1ZKFbh6A7qKy/By9Dg6G36Ep91vUJJ15Cqr0Z67E8/HzmBrw1OwxWyM+3Mo6BAuSB17oyfx0Oyl2DN0Hqs/70Cx6hBCvESF
+UY1ShWXZZEE7OTAYxZzaPH4TuoiusZvRnunFy2NbiHYuBp2vB66srX4vMEjpRKPxKXmnoQ4+Mn4DPiv8CYcrs3GfNUXJLtM+alSO
+hrMj/KT+wBNW3+E/2liywNO3iSflbaFva/+stGDTxE0E9Sjaox8HBhxpEamzMGSEaFKg+mjEddzDh1MxTDq3YV1kGBsjfwW3S9Cq
+anjmko+ndlb1UR3s6K8JlfphNWq9Ew/7c61T2BB/EbcaNkb8GBaE0tANH7/M34PLdhJDzjIcL9xPbdTG6zyM72Y+wXPHmvB489No
+fm0b5HnbQ9Rgp/7DSSd29AeVvPeNyK6JcYl/yQVi5dBjuGvoV/gaJe47s45QUxrDmcYX0MBsdF7egvXZ7+O0vZA4X8QmOQWjlSK7
+RDz5wIM30gp9UbWcGjXxhzdDu1SiNSpx6kcQB57rPnr/3dlkZarWLnlRq5oPET1dOCIOk4wALib9eeS5iygfhkd09H0DWphB/+gs
++PcOAS+ssrFmmXXgVfR0de9cpbAJfH3Q1jofW9DZk56dDcVsq9YcsoUMEd1qyLoT3BX1YiyHMJuk97hyjqIoE91t+NcTLeN0ZrfM
+oXatZbu6G0h4VG+ibqq0IJVK6cAjo6serG3vSUezCMct0yQeSOFJSUImqb2qbknUpDqlZxE0QZ+ZUpSlZx79h4Nda6zef9dlk121
+JDjbR5XggPRZlRnS6bRQRtLpn4++cuie/Yvn2svmNxuLw9WCcYIl4fEoTEGiSTUqJdfgU+8ROqf1iMkLzS389YtNPXc/PH8l8ONB
+JZkHD+4JtD04HmVEDWWErmBhzV2/2LB1bemJG6krzv2S6NOHUgtEP0Oif5pE/3fHoruP7N8RiP61GArzSwbUhJJQpXJKiKbfr/3b
+IhKq76sKPUdF9NW/LSqfSn6vjv8C45H/6FSgvZQAAAAASUVORK5CYII='
+     style='height:25px; border-radius:12px; display:inline-block; float:left; vertical-align:middle'>
+</img>
+
+</td>
+<td>
+
+&nbsp;&nbsp;<span style='font-size:12px'>SpectroChemPy's API - v.0.6.5.dev2<br/>© Copyright 2014-2023 - A.Travert & C.Fernandez @ LCS</span>
+
+</td>
+</tr>
+</table>
+</div></div>
+</div>
+</section>
+<section id="Importing-experimental-data">
+<h2>Importing experimental data<a class="headerlink" href="#Importing-experimental-data" title="Permalink to this heading"></a></h2>
+<p>Let’s show a first example. In the following cell we read experimental data aquired on an IR spectrometer in the <code class="docutils literal notranslate"><span class="pre">OMNIC</span> <span class="pre">(spg)</span></code> format and stored in our example repository on GitHub: <a class="reference external" href="https://github.com/spectrochempy/spectrochempy_data/tree/master/testdata">spectrochempy_data/testdata</a>.</p>
+<p>We simply specified the relative path with respect to the <code class="docutils literal notranslate"><span class="pre">testdata</span></code> folder, <em>i.e.,</em> <code class="docutils literal notranslate"><span class="pre">&quot;irdata/nh4y-activation.spg&quot;</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">scp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;irdata/nh4y-activation.spg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>It is worth to note that the data are downloaded from the remote repository and stored locall in the <code class="docutils literal notranslate"><span class="pre">datadir</span></code> default directory. As it is stored locally, if for some reason we need to download it again, it will be faster as no connection with the remote server need to be established again.</p>
+<p>To check that everything has been executed normally, you can print the <code class="docutils literal notranslate"><span class="pre">X</span></code> NDDataset informations.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<table style='background:transparent'>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>         name</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> nh4y-activation</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>       author</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> runner@fv-az1107-269</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>      created</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> 2023-05-31 12:25:02+00:00</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>  description</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> <div>Omnic title: NH4Y-activation.SPG<br/>               Omnic filename: /home/runner/.spectrochempy/testdata/irdata/nh4y-activation.spg</div></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>      history</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> <div>2023-05-31 12:25:04+00:00> Imported from spg file /home/runner/.spectrochempy/testdata/irdata/nh4y-activation.spg.<br/>               2023-05-31 12:25:04+00:00> Sorted by date</div></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><strong>          DATA </strong></td><td style='text-align:left; padding-bottom:0px; padding-top:0px; padding-top:10px; '><hr/></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>        title</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> absorbance</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>       values</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> <div><font color='blue'>         [[   2.057    2.061 ...    2.013    2.012]<br/>          [   2.033    2.037 ...    1.913    1.911]<br/>          ...<br/>          [   1.794    1.791 ...    1.198    1.198]<br/>          [   1.816    1.815 ...     1.24    1.238]] a.u.</font></div></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>        shape</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> (y:55, x:5549)</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><strong>     DIMENSION `x`</strong></td><td style='text-align:left; padding-bottom:0px; padding-top:0px; padding-top:10px; '><hr/></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>         size</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> 5549</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>        title</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> wavenumbers</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>  coordinates</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> <div><font color='blue'>[    6000     5999 ...    650.9    649.9] cm⁻¹</font></div></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><strong>     DIMENSION `y`</strong></td><td style='text-align:left; padding-bottom:0px; padding-top:0px; padding-top:10px; '><hr/></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>         size</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> 55</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>        title</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> acquisition timestamp (GMT)</td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>  coordinates</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> <div><font color='blue'>[1.468e+09 1.468e+09 ... 1.468e+09 1.468e+09] s</font></div></td><tr>
+<tr><td style='padding-right:5px; padding-bottom:0px; padding-top:0px; width:124px'><font color='green'>       labels</font> </td><td style='text-align:left; padding-bottom:0px; padding-top:0px; border:.5px solid lightgray;  '> <div><font color='darkcyan'>         [[  2016-07-06 19:03:14+00:00   2016-07-06 19:13:14+00:00 ...   2016-07-07 04:03:17+00:00   2016-07-07 04:13:17+00:00]<br/>          [  vz0466.spa, Wed Jul 06 21:00:38 2016 (GMT+02:00)   vz0467.spa, Wed Jul 06 21:10:38 2016 (GMT+02:00) ...<br/>             vz0520.spa, Thu Jul 07 06:00:41 2016 (GMT+02:00)   vz0521.spa, Thu Jul 07 06:10:41 2016 (GMT+02:00)]]</font></div></td><tr>
+</table></div>
+</div>
+<p>or plot it:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorials_00_introduction_to_spectrochempy_11_0.png" src="../_images/tutorials_00_introduction_to_spectrochempy_11_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to SpectroChemPy Tutorials!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A. Travert &amp; C. Fernandez.
+      <span class="lastupdated">Last updated on May 31, 2023.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
